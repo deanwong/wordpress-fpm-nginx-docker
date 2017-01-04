@@ -14,7 +14,7 @@ services:
 
   wordpress:
     build: ./wordpress-build
-    image: deanwong/wordpress:4.6
+    image: deanwong/wordpress:4.7
     volumes:
       - ./wordpress:/var/www/html
       - ./php/php.ini:/usr/local/etc/php/php.ini:ro
@@ -25,7 +25,7 @@ services:
       - db:mysql
 
   db:
-    image: mariadb:10
+    image: mariadb
     expose:
       - "3306"
     volumes:
